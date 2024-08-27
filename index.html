@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <script src="https://cdn.tailwindcss.com"></script>
   <title>Frontend Mentor | Age calculator app</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    * {
+      font-family: "Poppins", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+    }
+  </style>
 
 </head>
-<body>
 
-  Day
-  DD
-
-  Month
-  MM
-
-  Year
-  YYYY
-
-  -- years
-  -- months
-  -- days
-  
+<body class="bg-[#DBDBDB] min-h-dvh">
+  <main class="bg-white mx-4 mt-24 pb-16 p-4 rounded-t-lg rounded-l-lg rounded-br-[100px] flex flex-col h-2/3 m-auto">
+    <form class="flex mx-auto gap-12 mt-6">
+      <div class="flex flex-col flex-1">
+        <label class="text-[#716F6F]" for="dia">DÍA</label>
+        <input class="border min-w-[100px] border-solid border-[#DBDBDB] h-12 px-4 text-black rounded-md" type="number" id="dia" name="dia" min="1" max="31" placeholder="DD" required>
+      </div>
+      <div class="flex flex-col flex-1">
+        <label class="text-[#716F6F]" for="mes">MES</label>
+        <input class="border min-w-[100px] border-solid border-[#DBDBDB] max-w-fit h-12 px-4 text-black rounded-md" type="number" id="mes" name="mes" min="1" max="12" placeholder="MM" required>
+      </div>
+      <div class="flex flex-col flex-1">
+        <label class="text-[#716F6F]" for="anho">Año</label>
+        <input class="border min-w-[100px] border-solid border-[#DBDBDB] max-w-fit h-12 px-4 text-black rounded-md" type="number" id="anho" name="anho" min="1950" max="2024" placeholder="AAAA" required>
+      </div>
+    </form>
+    <div class="border border-solid border-b-1 relative top-20 z-[1]"></div>
+    <img src="/assets/images/icon-arrow.svg" alt="flecha" class="bg-[#854DFF] rounded-full flex mx-auto my-8 p-4 z-[10]">
+    <section class="flex flex-col mx-auto">
+      <p class="text-6xl italic"><span class="text-[#854DFF]">--</span> días</p>
+      <p class="text-6xl italic"><span class="text-[#854DFF]">--</span> meses</p>
+      <p class="text-6xl italic"><span class="text-[#854DFF]">--</span> años</p>
+    </section>
+  </main>
 </body>
+
 </html>
