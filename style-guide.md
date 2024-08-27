@@ -13,16 +13,16 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Purple: hsl(259, 100%, 65%)
-- Light red: hsl(0, 100%, 67%)
+- Purple: #854DFF
+- Light red: #FF5757
 
 ### Neutral
 
-- White: hsl(0, 0%, 100%)
-- Off white: hsl(0, 0%, 94%)
-- Light grey: hsl(0, 0%, 86%)
-- Smokey grey: hsl(0, 1%, 44%)
-- Off black: hsl(0, 0%, 8%)
+- White: #FFFFFF
+- Off white: #F0F0F0
+- Light grey: #DBDBDB
+- Smokey grey: #716F6F
+- Off black: #000000
 
 ## Typography
 

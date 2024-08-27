@@ -1,28 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <!-- Metadatos básicos para la codificación y la compatibilidad con dispositivos móviles -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
+  <!-- Favicon para el navegador -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
+  <!-- Cargar TailwindCSS desde CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Vinculación al archivo JavaScript que contiene la lógica de la calculadora de edad -->
+  <script type="module" src="script.js"></script>
+
+  <!-- Título de la página -->
   <title>Frontend Mentor | Age calculator app</title>
 
+  <!-- Importar la fuente Poppins desde Google Fonts y aplicar estilos básicos -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+    * {
+      font-family: "Poppins", sans-serif;
+      /* Aplicar la fuente Poppins a todo el documento */
+      font-weight: 500;
+      /* Peso medio para un texto bien equilibrado */
+      font-style: normal;
+      /* Sin estilo en cursiva por defecto */
+    }
+  </style>
 </head>
-<body>
 
-  Day
-  DD
+<body class="bg-[#DBDBDB] min-h-dvh">
+  <!-- Contenedor principal del contenido -->
+  <main class="bg-white mx-4 mt-24 pb-16 p-4 rounded-t-lg rounded-l-lg rounded-br-[100px] flex flex-col h-2/3 m-auto md:max-w-xl">
+    <!-- Formulario con inputs para día, mes y año -->
+    <form class="flex flex-col md:flex-row mx-auto gap-6 mt-6" id="formulario">
 
-  Month
-  MM
+      <!-- Contenedor del input para el día -->
+      <div class="flex flex-col flex-1">
+        <label id="label-dia" class="text-[#716F6F]" for="dia">DÍA</label>
+        <input class="border w-full border-solid border-[#DBDBDB] h-12 px-4 text-black rounded-md" type="number" id="dia" name="dia" placeholder="DD" required>
+      </div>
 
-  Year
-  YYYY
+      <!-- Contenedor del input para el mes -->
+      <div class="flex flex-col flex-1">
+        <label id="label-mes" class="text-[#716F6F]" for="mes">MES</label>
+        <input class="border w-full border-solid border-[#DBDBDB] h-12 px-4 text-black rounded-md" type="number" id="mes" name="mes" placeholder="MM" required>
+      </div>
 
-  -- years
-  -- months
-  -- days
-  
+      <!-- Contenedor del input para el año -->
+      <div class="flex flex-col flex-1">
+        <label id="label-anho" class="text-[#716F6F]" for="anho">AÑO</label>
+        <input class="border w-full border-solid border-[#DBDBDB] h-12 px-4 text-black rounded-md" type="number" id="anho" name="anho" placeholder="AAAA" required>
+      </div>
+    </form>
+
+    <!-- Botón para calcular la edad -->
+    <button type="submit" id="boton-resultado" class="m-auto">
+      <img id="calcular-edad" src="/assets/images/icon-arrow.svg" alt="flecha" class="bg-[#854DFF] rounded-full flex mx-auto my-8 p-4 cursor-pointer">
+    </button>
+
+    <!-- Sección para mostrar el resultado del cálculo de la edad -->
+    <section class="flex flex-col mx-auto" id="resultado">
+      <p class="text-6xl italic"><span id="resultado-anhos" class="text-[#854DFF]">--</span> años</p>
+      <p class="text-6xl italic"><span id="resultado-meses" class="text-[#854DFF]">--</span> meses</p>
+      <p class="text-6xl italic"><span id="resultado-dias" class="text-[#854DFF]">--</span> días</p>
+    </section>
+  </main>
 </body>
+
 </html>
